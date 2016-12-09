@@ -83,7 +83,7 @@ export default function index() {
 
         <h2 {...style.h2}>Experience</h2>
 
-        <p {...style.paragraph}>I'm at Deliveroo, getting food to hungry people. Before I was at Osper educating children in finance with useful banking tools and before that I was at a web agency called Wickedweb and worked on a veritable cornucopia of projects for high profile clients.</p>
+        <p {...style.paragraph}>I'm at Deliveroo, getting food to hungry people. Before I was at Osper educating children in finance with useful banking tools and before that I was at a web agency called Wickedweb and worked on a number of projects for high profile clients.</p>
 
         <h2 {...style.h2}>Tools</h2>
 
