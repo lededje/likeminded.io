@@ -1,5 +1,6 @@
 import React from 'react';
-import css from 'next/css'
+import Helmet from "react-helmet";
+import css from 'next/css';
 
 const style = {
   global: css({
@@ -69,9 +70,19 @@ const style = {
 export default function index() {
   return (
     <div {...style.global} {...style.container}>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" />
-      <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,300italic,300,400italic,700italic,900,900italic' rel='stylesheet' type='text/css' />
-      <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
+      <Helmet
+        title="Miles Spoor | I am Like Minded"
+        link={[
+            {
+              rel: 'stylesheet',
+              href: 'https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css'
+            },
+            {
+              rel: 'stylesheet',
+              href: 'https://fonts.googleapis.com/css?family=Merriweather:400,900'
+            },
+        ]}
+      />
 
       <div {...style.grid}>
 
