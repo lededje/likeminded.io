@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import styles from '../styles.module.css';
 
-export default () => {
+const Index = () => {
   return (
     <div className={styles.container}>
       <Helmet
@@ -55,3 +55,5 @@ export default () => {
     </div>
   )
 }
+
+export default Index;
