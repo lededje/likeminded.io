@@ -1,0 +1,55 @@
+
+
+.container {
+  font: 400 14px/23px "Merriweather";
+  margin: 0 auto;
+  padding: 150px 30px;
+  text-align: left;
+  width: 550px;
+}
+
+.grid {
+  column-count: 2;
+  column-gap: 30px;
+}
+
+@media only screen and (max-width: 667px) {
+  .container {
+    width: auto;
+    padding: 30px;
+  }
+  .grid {
+    column-count: 1;
+    column-gap: 0;
+  }
+}
+
+.h1 {
+  color: #222;
+  font: 900 42px/44px "Merriweather";
+  letter-spacing: -1px;
+  margin: 20px 0 0 0;
+}
+
+.h2 {
+  color: #333;
+  font: 900 14px/22px "Merriweather";
+  margin-bottom: 0;
+}
+
+.paragraph {
+  margin-top: 0.2em;
+  color: #333;
+}
+
+.contact-link {
+  display: block;
+}
+
+.break {
+  background: #333;
+  border: 0;
+  height: 3px;
+  margin: 19px 0 25px 0;
+  width: 100px;
+}

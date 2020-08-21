@@ -1,75 +1,12 @@
 import React from 'react';
 import Helmet from "react-helmet";
-import css from 'next/css';
+import classNames from 'classnames';
 
-const style = {
-  global: css({
-    font: '400 14px/23px "Merriweather"',
-  }),
+import styles from '../styles.module.css';
 
-  container: css({
-    margin: '0 auto',
-    padding: '150px 30px',
-    textAlign: 'left',
-    width: '550px',
-  }),
-
-  grid: css({
-    webkitColumnCount: 2,
-    webkitColumnGap: '30px',
-    mozColumnCount: 2,
-    mozColumnGap: '30px',
-    columnCount: 2,
-    columnGap: '30px',
-    '@media only screen and (max-width: 667px)': {
-      '.container': {
-        width: 'auto',
-        padding: '30px',
-      },
-      '.grid': {
-        webkitColumnCount: 1,
-        webkitColumnGap: 0,
-        mozColumnCount: 1,
-        mozColumnGap: 0,
-        columnCount: 1,
-        columnGap: 0,
-      },
-    },
-  }),
-  link: css({
-    color: '#333',
-  }),
-  h1: css({
-    color: '#222',
-    font: '900 42px/44px "Merriweather"',
-    letterSpacing: '-1px',
-    margin: '20px 0 0 0',
-  }),
-  h2: css({
-    color: '#333',
-    font: '900 14px/22px "Merriweather"',
-    marginBottom: 0,
-  }),
-  paragraph: css({
-    marginTop: '0.2em',
-    color: '#333',
-  }),
-  contactLink: css({
-    display: 'block',
-  }),
-  break: css({
-    background: '#333',
-    border: 0,
-    height: '3px',
-    margin: '19px 0 25px 0',
-    width: '100px',
-  }),
-
-};
-
-export default function index() {
+export default () => {
   return (
-    <div {...style.global} {...style.container}>
+    <div className={styles.container}>
       <Helmet
         title="Miles Spoor | I am Like Minded"
         link={[
@@ -84,33 +21,35 @@ export default function index() {
         ]}
       />
 
-      <div {...style.grid}>
+      <div className={styles.grid}>
 
-        <h1 {...style.h1}>Like<br /> Minded.</h1>
+        <h1 className={styles.h1}>Like<br /> Minded.</h1>
 
-        <hr {...style.break} />
+        <hr className={styles.break} />
 
-        <p {...style.paragraph}>I'm Miles, an engineer at Deliveroo in London. I have seven years experience as a software engineer and enjoy working and learning with small teams of talented people on projects with freedom to own process and deliver.</p>
+        <p className={styles.paragraph}>I'm Miles, a web product engineer based in London. I have over ten years experience as a software engineer and enjoy working and learning with small teams of talented people on projects with the freedom to own process and deliver.</p>
 
-        <h2 {...style.h2}>Experience</h2>
+        <p className={styles.paragraph}>I specialize in all things React, both websites and native mobile applications. I have experience writing and supporting high traffic applications in fast moving environments.</p>
 
-        <p {...style.paragraph}>I'm at Deliveroo, getting food to hungry people. Before I was at Osper educating children in finance with useful banking tools and before that I was at a web agency called Wickedweb and worked on a number of projects for high profile clients.</p>
+        <h2 className={styles.h2}>Experience</h2>
 
-        <h2 {...style.h2}>Tools</h2>
+        <p className={styles.paragraph}>I'm currently working at a startup called <a href="https://stasher.com">Stasher</a> enabling you to let go of your luggage and explore. Before that I made healthcare more affordable at <a href="https://babylonhealth.com/">Babylon Health</a>, built a better banking tools at <a href="https://monzo.com">Monzo</a> and got food to hungry people at <a href="https://deliveroo.co.uk">Deliveroo</a>.</p>
 
-        <p {...style.paragraph}>React, React Native, Redux, Marionette and Backbone, Cordova/Phonegap, Nodejs/iojs, ExpressJS, Socketio, Nightwatch/Selenium, Git, Jenkins, Karma, Chai, Mocha, Less &amp; SCSS, Appium, Grunt/Gulp.</p>
+        <h2 className={styles.h2}>Tools</h2>
 
-        <h2 {...style.h2}>Interests</h2>
+        <p className={styles.paragraph}>React, React Native, Redux, Express, Socketio, Nightwatch/Selenium, Git, Circle, Appium.</p>
 
-        <p {...style.paragraph}>Mobile applications, experiments, procedural generation, cryptography, Let's Encrypt!, The Culture, Internet privacy and of course Bitcoins.</p>
+        <h2 className={styles.h2}>Interests</h2>
 
-        <h2 {...style.h2}>Contact</h2>
+        <p className={styles.paragraph}>Mobile applications, product experiments, procedural generation, electical engineering, cryptography, Let's Encrypt!, The Culture, Internet privacy and cryptocurrencies.</p>
 
-        <p {...style.paragraph}>
-          <a {...style.link} {...style.contactLink} href="https://github.com/lededje" target="_blank">hub/lededje</a>
-          <a {...style.link} {...style.contactLink} href="https://uk.linkedin.com/in/lededje" target="_blank">in/lededje</a>
-          <a {...style.link} {...style.contactLink} href="https://keybase.io/lededje" target="_blank">keybase/lededje</a>
-          <a {...style.link} {...style.contactLink} href="mailto:hello@likeminded.io">hello@likeminded.io</a>
+        <h2 className={styles.h2}>Contact</h2>
+
+        <p className={styles.paragraph}>
+          <a className={classNames(styles.link, styles['contact-link'])} href="https://github.com/lededje" target="_blank">hub/lededje</a>
+          <a className={classNames(styles.link, styles['contact-link'])} href="https://uk.linkedin.com/in/lededje" target="_blank">in/lededje</a>
+          <a className={classNames(styles.link, styles['contact-link'])} href="https://keybase.io/lededje" target="_blank">keybase/lededje</a>
+          <a className={classNames(styles.link, styles['contact-link'])} href="mailto:hello@likeminded.io">hello@likeminded.io</a>
         </p>
       </div>
     </div>
